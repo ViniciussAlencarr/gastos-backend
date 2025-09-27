@@ -174,7 +174,7 @@ async function main() {
     })
 
 
-    await fastify.listen({ port: parseInt(process.env.PORT || "3000") });
+    await fastify.listen({ port: parseInt(process.env.PORT || "3000"), host: "0.0.0.0" });
     console.log(`Servidor rodando na porta ${process.env.PORT}`);
 }
 
