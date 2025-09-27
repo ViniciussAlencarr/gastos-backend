@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                 // padrão moderno
+    "module": "commonjs",               // Node usa CommonJS
+    "rootDir": "./src",                 // pasta dos arquivos TS
+    "outDir": "./dist",                 // pasta compilada JS
+    "strict": true,                     // ativa checagem rigorosa
+    "esModuleInterop": true,            // importações compatíveis com JS
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
