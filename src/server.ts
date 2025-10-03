@@ -70,7 +70,7 @@ async function main() {
             const dataGasto: Gasto = {
                 ...bodyData,
                 userId,
-                date: new Date() // <- importante
+                date: new Date(bodyData.date) // <- importante
             };
 
             const result = await GASTOS.insertOne(dataGasto);
@@ -174,7 +174,7 @@ async function main() {
     })
 
 
-    await fastify.listen({ port: parseInt(process.env.PORT || "3000"), host: "0.0.0.0" });
+    await fastify.listen({ port: parseInt(process.env.PORT || "3000")});
     console.log(`Servidor rodando na porta ${process.env.PORT}`);
 }
 
